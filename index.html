@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vinay Jain | Interactive Resume</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-sanitize.js"></script>
+    <link rel="stylesheet" href="css/console.css" />
+</head>
+<body onclick="focusOnInput()">
+	<div class="console" data-ng-app="Console" data-ng-controller="consoleController">
+		<b style="font-size: 1em; font-weight: 900;">
+				  ======================================================== 
+			<br />Hello World! <br />Type "help" and press return [enter] to get more info 
+			<br />========================================================
+		</b>
+		<br /> 
+		<span ng-repeat="record in history"> 
+			<span>{{userName + record.cmd}}</span><br /> 
+			<span class="result" ng-bind-html="getHTML(record.result)"></span>
+		</span>
+		
+		<span id="input">{{userName + newInput }}</span><span id="cursor"></span>
+		
+		<form class="invisible" data-ng-submit="submit()">
+			<input autocomplete="off" type="text" id="newInput" class="invisible" data-ng-trim="false" data-ng-model="newInput" autofocus /> 
+			<a class="invisible" href="mailto:vinay.jn7@gmail.com" target="_blank" id="link_mail"></a> 
+			<a class="invisible" href="./files/VinayJain.pdf" target="_blank" id="link_resume"></a> 
+			<a class="invisible" href="https://in.linkedin.com/in/vinayjn" target="_blank" id="link_linkedin"></a>
+			<button class="invisible" id="submit" type="submit"></button>
+		</form>
+	</div>
+	<script src="js/ngcontroller.js" ></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65423577-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

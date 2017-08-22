@@ -1,0 +1,81 @@
+body {
+    background-color: #282828;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right:0;
+    left: 0;
+    margin: 0;
+    padding: 3px;
+}
+
+.console{
+	color: #66FF33;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 0.95em;
+	max-width:900px;
+	float:left;
+}
+.console table td{
+	font-size: 0.95em;
+}
+.console a {
+	color: #66FF33;
+} 
+        #input, .result {
+            white-space: pre-wrap;
+        }
+
+        table, td {
+            margin: 0px;
+            padding: 0px;
+            padding-right: 20px;
+        }
+		.pre{
+			white-space: pre;
+		}
+		td{
+			line-height:1.1em;
+			vertical-align:top;
+		}
+
+        .invisible {
+            position: relative;
+            left: -5.9em;
+            width:6em;
+            padding-right:1em;
+            color:transparent; border-color:transparent;
+            background-color: transparent;
+        }
+
+        .result {
+            display: block;
+            padding-left: 5px;
+        }
+
+        #cursor {
+            width: 0.6em;
+            height: 3px;
+            margin-bottom: -0.2em;
+            display: inline-block;
+            -webkit-animation: blink 0.8s none 0s infinite;
+            /* Chrome, Safari, Opera */
+            animation: blink 0.8s none 0s infinite;
+        }
+
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes blink {
+            0%{ background-color: #66FF33;}
+            59% { background-color: #66FF33;}
+            60% {background-color: transparent;}
+            100% {background-color: transparent;}
+        }
+
+        /* Standard syntax */
+        @keyframes blink {
+            0%{ background-color: #66FF33;}
+            59% { background-color: #66FF33;}
+            60% {background-color: transparent;}
+            100% {background-color: transparent;}
+        }
+		
